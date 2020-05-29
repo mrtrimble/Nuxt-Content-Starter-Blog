@@ -36,7 +36,8 @@ export default {
           name: 'description',
           content: 'This is my homepage'
         }
-      ]
+      ],
+      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
     }
   }
 };
