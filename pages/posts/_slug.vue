@@ -1,6 +1,6 @@
 <template>
   <section class="text-gray-700 body-font overflow-hidden">
-    <div class="container px-5 py-24 mx-auto">
+    <div class="container px-5 pb-24 mx-auto">
       <div class="flex flex-wrap -m-12">
         <div class="p-12 md:w-2/3 flex flex-col items-start">
           <span
@@ -9,9 +9,7 @@
           <h2
             class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4"
           >{{ page.title }}</h2>
-          <nuxt-content :document="page"
-            class="markdown leading-relaxed mb-8"
-          />
+          <div class="markdown leading-relaxed mb-8" v-html="body"></div>
           <div
             class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-200 mt-auto w-full"
           >
@@ -34,6 +32,8 @@
 </template>
 
 <script>
+import marked from "marked";
+
 export default {
   async asyncData({ $content, params, error }) {
     const page = await $content("posts", params.slug)
@@ -46,14 +46,19 @@ export default {
       page
     };
   },
+  computed:{
+    body(){
+      return marked(this.page.body)
+    }
+  },
   head() {
     return {
-      title: "Blog",
+      title: this.page.title,
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "This is my blog"
+          content: this.page.summary
         }
       ]
     };
