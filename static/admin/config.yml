@@ -16,6 +16,7 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Author', name: 'author', widget: 'string', default: 'Ryan Trimble' }
       - { label: 'Publish Date', name: 'publish_date', widget: 'datetime' }
       - { label: 'Summary', name: 'summary', widget: 'string' }
       - { label: 'Category', name: 'category', widget: 'select', options: ["Design", "UX", "Dev"], default: ["Design"]}
