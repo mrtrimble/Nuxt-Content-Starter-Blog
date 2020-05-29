@@ -5,6 +5,7 @@ This starter blog is built with:
 - @nuxt/content
 - @nuxt/components
 - Tailwind CSS
+- Tailblocks
 
 ## Build Setup
 

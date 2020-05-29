@@ -1,9 +1,36 @@
 <template>
-  <div>
-    <h1 class="text-4xl">{{page.title}}</h1>
-    <h2 class="text-xl mb-8">posted by {{page.author}} in {{ page.category }}</h2>
-    <nuxt-content class="markdown" :document="page" />
-  </div>
+  <section class="text-gray-700 body-font overflow-hidden">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-12">
+        <div class="p-12 md:w-2/3 flex flex-col items-start">
+          <span
+            class="inline-block py-1 px-3 rounded bg-green-100 text-green-500 text-sm font-medium tracking-widest uppercase"
+          >{{page.category}}</span>
+          <h2
+            class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4"
+          >{{ page.title }}</h2>
+          <nuxt-content :document="page"
+            class="markdown leading-relaxed mb-8"
+          />
+          <div
+            class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-200 mt-auto w-full"
+          >
+          </div>
+          <a class="inline-flex items-center">
+            <img
+              alt="blog"
+              src="https://dummyimage.com/104x104"
+              class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+            />
+            <span class="flex-grow flex flex-col pl-4">
+              <span class="title-font font-medium text-gray-900 uppercase">{{page.author}}</span>
+              <span class="text-gray-500 text-sm">UI DEVELOPER</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>

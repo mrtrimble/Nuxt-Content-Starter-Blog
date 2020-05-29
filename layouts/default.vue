@@ -4,5 +4,6 @@
     <main class="container mx-auto">
       <nuxt />
     </main>
+    <TheFooter />
   </div>
 </template>

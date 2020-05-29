@@ -1,19 +1,27 @@
 <template>
-  <header class="h-16 bg-indigo-600">
-    <div class="container mx-auto flex justify-between h-full">
-      <section id="logo" class="flex items-center justify-center h-full">
-        <h1 class="text-3xl text-white uppercase">My Website</h1>
-      </section>
-      <nav class="h-full">
-        <ul class="flex items-center justify-center h-full">
-          <li><nuxt-link class="text-indigo-100 hover:text-white uppercase px-4" to="/">Home</nuxt-link></li>
-          <li><nuxt-link class="text-indigo-100 hover:text-white uppercase px-4" to="/about">About</nuxt-link></li>
-          <li><nuxt-link class="text-indigo-100 hover:text-white uppercase px-4" to="/posts">Blog</nuxt-link></li>
-        </ul>
+  <header class="text-gray-700 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        </svg>
+        <span class="ml-3 text-xl">starter blog</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <nuxt-link to="/" class="mr-5 hover:text-gray-900">Home</nuxt-link>
+        <nuxt-link to="/about" class="mr-5 hover:text-gray-900">About</nuxt-link>
+        <nuxt-link to="/posts" class="mr-5 hover:text-gray-900">Blog</nuxt-link>
+        <nuxt-link to="/contact" class="mr-5 hover:text-gray-900">Contact</nuxt-link>
       </nav>
     </div>
   </header>
 </template>
-
-<style lang="scss" scoped>
-</style>
