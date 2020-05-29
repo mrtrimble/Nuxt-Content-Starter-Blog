@@ -8,4 +8,6 @@ link_two_text: Also Here
 link_two_url: https://google.com/
 ---
 
-You can edit the content of this section within the content/index.md file!
+You can edit the content of this section within the content/index.md file!  
+
+View this project on [Github](https://github.com/mrtrimble/Nuxt-Content-Starter-Blog)!
