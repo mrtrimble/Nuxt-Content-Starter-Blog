@@ -66,7 +66,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .markdown {
   @apply leading-relaxed text-lg;
 }
@@ -126,5 +126,4 @@ export default {
 .markdown table {
   @apply mb-6;
 }
-/* purgecss end ignore */
 </style>
